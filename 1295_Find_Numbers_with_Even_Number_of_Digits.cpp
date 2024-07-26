@@ -18,12 +18,17 @@ int countNumOfDigits(int n)
     return count;
 }
 
+int countNumOfDigits2(int n)
+{
+    return (int)log10(n) + 1;
+}
+
 int findNumbers(vector<int>& a)
 {
     int count = 0;
     for (int i = 0; i < a.size(); i++)
     {
-        if(countNumOfDigits(a[i]) % 2 == 0)
+        if(countNumOfDigits2(a[i]) % 2 == 0)
         {
             count++;
         }
